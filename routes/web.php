@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('candidates', 'CandidatesSiteController@create');
+Route::post('candidates/store', 'CandidatesSiteController@store');
