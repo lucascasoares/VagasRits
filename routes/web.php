@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 Route::get('candidates', 'CandidatesSiteController@create');
 Route::post('candidates/store', 'CandidatesSiteController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
