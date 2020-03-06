@@ -42,7 +42,7 @@ services:
       - PHP_MEMORY_LIMIT=256M
     ports:
       - target: 8080
-        published: 8080
+        published: 80
       - target: 8083
         published: 8083
     links:
