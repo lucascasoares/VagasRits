@@ -42,4 +42,10 @@ class HomeController extends Controller
 		return view('show', ['candidate' => $candidate[0]]);
     }
 
+	public function resume($id)
+	{
+		$candidate = DB::table('candidates')->select('resume_path')->where('id', '=', $id)->get();
+		$pathToFile = storage_path('app/' . $candidate[0]->resume_path);
+		return response()->download($pathToFile);
+	}
 }

@@ -78,7 +78,7 @@
 				</tr>
 				<tr>
 				  <td><strong>Currículo</strong></td>
-				  <td>Link</td>
+				  <td><a href="{{ route('resume', $candidate->id) }}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
 				</tr>
 				<tr>
 				  <td><strong>Cadastro</strong></td>
