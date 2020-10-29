@@ -1,24 +1,23 @@
 ## Instalando o VagasRits
 
 Para rodar o projeto, se faz necessário:
-1) Cloná-lo do GitHub:
-$ git clone https://github.com/lucascasoares/VagasRits.git
+1) Cloná-lo do GitHub:\
+`$git clone https://github.com/lucascasoares/VagasRits.git`
 
-2) Acessar a pasta do projeto e executar:
-$ composer install
-$ npm install
-$ npm run dev
-$ npm run production
+2) Acessar a pasta do projeto e executar:\
+`$composer install`\
+`$npm install`\
+`$npm run prod`
 
-3) Criar um .env a partir de .env-example
-$ cp .env-example .env
+3) Criar um .env a partir de .env-example:\
+`$cp .env-example .env`
 
-4) Criar um app/key:
-$ php artisan key:generate
+4) Criar um app/key:\
+`$php artisan key:generate`
 
 5) Editar o .env e colocar as seguintes informações:
 
-DB_CONNECTION=pgsql
+```DB_CONNECTION=pgsql
 DB_HOST=postgres
 DB_PORT=5432
 DB_DATABASE=VagasRits
@@ -37,17 +36,17 @@ MAIL_PASSWORD=null
 MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS=from@example.com
 MAIL_FROM_NAME="${APP_NAME}"
-
+```
 Preenchendo MAIL_USERNAME e MAIL_PASSWORD com os dados da sua conta do mailtrap. As informações acima referentes ao postgres e redis estão configuradas no docker-compose.yml.
 
-6) Criar as tabelas do banco de dados:
-$ docker-compose run web php artisan migrate
+6) Criar as tabelas do banco de dados:\
+`$docker-compose run web php artisan migrate`
 
-7) Por fim basta rodar:
-$ docker-compose up
+7) Por fim basta rodar:\
+`$docker-compose up`
 
 ## Utilizando o VagasRits
-1) O sistema irá rodar na porta 80, portanto basta acessar http://localhost
+1) O sistema está configurado por padrão para rodar na porta 80, portanto basta acessar http://localhost\
 
 2) A rota para o cadastro de candidatos é http://localhost/candidates
 
